@@ -34,8 +34,8 @@ class Spider(pyclt.api.Api):
         return json.loads(urllib.request.urlopen(self.__url,data).read().decode('utf-8'))
         
     def __DictData2Result(self,dict_data):
-        for key,value in dict_data.items():
+        for key,value in list(dict_data.items()):
             if key == 'translateResult':
-                for x_key,x_value in value[0][0].items():
+                for x_key,x_value in list(value[0][0].items()):
                     if x_key =='tgt':
                         return x_value

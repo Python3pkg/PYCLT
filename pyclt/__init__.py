@@ -73,11 +73,11 @@ class Main():
         if self.pyclt.__type__ == 'cmd' : 
             print('<---------------->')
             if platform.system() =='Windows':
-                print(self.text['windowsPS'])
+                print((self.text['windowsPS']))
                 print('<---------------->')
                 
             if len(sys.argv) >= 3:
-                print(self.text['more_arg'])
+                print((self.text['more_arg']))
             
 def run4pyclt():
     main = Main(sys.argv,'nothing')

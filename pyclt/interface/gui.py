@@ -32,7 +32,7 @@ class GuiProgram(Interface):
             self.__packAny()
             self.master.mainloop()
         except ValueError:
-            print(self.text['tk_error'])
+            print((self.text['tk_error']))
     def __showAbout(self):
         '''显示开发者相关信息'''
         showinfo(title = self.text['messagebox_title'], message=self.text['gui_about'])
